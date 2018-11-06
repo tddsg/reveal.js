@@ -24,13 +24,13 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-        <!-- markdown input  -->
-        <section data-markdown="slides/input.md"
-                 data-separator="^---"
-                 data-separator-vertical="^&&&"
-                 data-separator-notes="^Note:"
-                 data-charset="iso-8859-15">
-        </section>
+				<!-- markdown input	 -->
+				<section data-markdown="slides/program-synthesis-now.md"
+								 data-separator="^---"
+								 data-separator-vertical="^&&&"
+								 data-separator-notes="^Note:"
+								 data-charset="iso-8859-15">
+				</section>
 			</div>
 		</div>
 
@@ -48,7 +48,9 @@
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				],
-        slideNumber: true
+				slideNumber: true,
+				history: true,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
 			});
 		</script>
 	</body>
