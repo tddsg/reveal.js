@@ -25,13 +25,16 @@
 		<div class="reveal">
 			<div class="slides">
 				<!-- markdown input	 -->
-				<section data-markdown="slides/program-synthesis-now.md"
-								 data-separator="^---"
-								 data-separator-vertical="^&&&"
-								 data-separator-notes="^Note:"
-                 data-attributes="--\s(.*?)$"
-								 data-charset="iso-8859-15">
-				</section>
+				<!-- <section data-markdown="slides/program-synthesis-now.md"
+						 data-separator="^---"
+						 data-separator-vertical="^&&&"
+						 data-separator-notes="^Note:"
+             data-attributes="--\s(.*?)$"
+						 data-charset="iso-8859-15">
+				     </section> -->
+        <!-- html input -->
+        <section data-external="slides/program-synthesis-now.html">
+        </section>
 			</div>
 		</div>
 
@@ -47,10 +50,12 @@
 				 { src: 'plugin/markdown/marked.js' },
 				 { src: 'plugin/markdown/markdown.js' },
 				 { src: 'plugin/notes/notes.js', async: true },
-				 { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				 { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+         { src: 'plugin/external/external.js', condition: function() { return !!document.querySelector( '[data-external]' ); } }
 			 ],
 			 slideNumber: true,
        fragments: true,
+       fragmentInURL: false,
 			 history: true,
 			 transition: 'slide', // none/fade/slide/convex/concave/zoom
 		 });
